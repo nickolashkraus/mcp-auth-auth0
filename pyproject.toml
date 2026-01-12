@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "mcp-auth-auth0"
+version = "0.1.0"
+description = "A custom implementation of the MCP authorization spec with Auth0."
+authors = ["Nickolas Kraus <0x@nickolaskraus.io>"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.13,<4.0"
+fastapi = {extras = ["standard"], version = "^0.128.0"}
+pydantic-settings = "^2.12.0"
+authlib = "^1.6.6"
+fastmcp = "^2.14.3"
+auth0-api-python = "^1.0.0b6"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^9.0.2"
+ruff = "^0.14.11"
+ty = "^0.0.11"
+
+[tool.ruff.lint]
+extend-select = ["I"]
+
+[build-system]
+requires = ["poetry-core>=1.5.0"]
+build-backend = "poetry.core.masonry.api"
